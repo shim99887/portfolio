@@ -18,8 +18,6 @@ export const Number = styled('div')<{ num?: number }>(
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  background-color: ${num > 2 ? 'blue' : num > 1 ? 'cadetblue' : 'white'};
-  color: ${num > 1 ? 'white' : 'black'};
 `,
 )
 

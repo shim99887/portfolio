@@ -14,8 +14,12 @@ const CommonSideProject = ({ payload }: PropsWithChildren<{ payload: ICommonSide
 
   return (
     <S.SideProjectWrapper>
-      <S.SideProjectImage image={payload.image} />
-      <S.SideProjectTitle myBackgroundColor="rgb(37,37,37)">{payload.title}</S.SideProjectTitle>
+      <S.SideProjectImage
+        style={{
+          backgroundImage: 'url(' + payload.image + ')',
+        }}
+      />
+      <S.SideProjectTitle>{payload.title}</S.SideProjectTitle>
     </S.SideProjectWrapper>
   )
 }

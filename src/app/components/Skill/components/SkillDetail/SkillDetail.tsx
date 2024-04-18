@@ -9,7 +9,7 @@ const SkillDetail = ({ skill, name }: Props) => {
   return (
     <S.Item>
       <S.Wrapper>
-        {skill && <S.Number num={skill}>{skill}</S.Number>}
+        {skill && <S.Number>{skill}</S.Number>}
         <S.Name>{name}</S.Name>
       </S.Wrapper>
     </S.Item>

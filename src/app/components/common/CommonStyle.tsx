@@ -52,7 +52,7 @@ export const SideProjectWrapper = styled('div')`
 `
 
 export const SideProjectTitle = styled('div')((props) => ({
-  backgroundColor: props.myBackgroundColor,
+  backgroundColor: 'rgb(37,37,37)',
   color: 'white',
   display: 'flex',
   justifyContent: 'center',
@@ -63,7 +63,6 @@ export const SideProjectTitle = styled('div')((props) => ({
 }))
 
 export const SideProjectImage = styled('div')((props) => ({
-  backgroundImage: 'url(' + props.image + ')',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   width: '100%',
