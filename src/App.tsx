@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as S from './App.styles'
+import Info from './components/info/Info';
+import Introduce from './components/introduce/Introduce';
+import Skill from './components/Skill/Skill';
+import Experience from './components/Experience/Experience';
+import Project from './components/Project/Project';
+import SideProject from './components/SideProject/SideProject';
+import Etc from './components/Etc/Etc';
+import Education from './components/Education/Education';
+import project from './payload/project';
+import education from './payload/education';
+import etc from './payload/etc';
+import sideProject from './payload/sideProject';
 
 function App() {
+  const projectPayload = project
+  const educationPayload = education
+  const etcPayload = etc
+  const sideProjectPayload = sideProject
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <S.Container>
+      <Info />
+      <Introduce />
+      <Skill />
+      <Experience />
+      <Project payload={projectPayload} />
+      <SideProject payload={sideProjectPayload} />
+      <Education payload={educationPayload} />
+      <Etc payload={etcPayload} />
+    </S.Container>
   );
 }
 
