@@ -1,9 +1,6 @@
 export declare namespace ICommon {
   export interface Payload {
-    /**
-     *
-     * @description true 라면 렌더링 X
-     */
+    // 비활성화용 default: 보이기
     disable?: boolean
   }
 }

@@ -1,29 +1,53 @@
-import React from 'react'
-import { Email, GitHub, Phone } from '@mui/icons-material'
-import * as S from './Info.styles'
-import Detail from '../../components/info/components/Detail/Detail'
-import DetailHyperLink from '../../components/info/components/DetailHyperLink/DetailHyperLink'
+import React, { PropsWithChildren } from 'react'
+import { Col, Row } from 'react-bootstrap'
+import { IInfo } from './IInfo'
+import { HyperLink } from '../common'
 
-const Info = () => {
+const Info = ({ payload }: PropsWithChildren<{ payload: IInfo.Payload }>) => {
+  if (payload.disable) return null
+
+  const renderContact = () => (
+    <>
+      {payload.contact.map((item, index) => (
+        <Row key={index.toString()} className={'pb-3'}>
+          {item.icon && <Col xs={1}>{item.icon}</Col>}
+          <Col xs={'auto'}>
+            <HyperLink link={item.link} url={item.content} />
+          </Col>
+        </Row>
+      ))}
+    </>
+  )
+
+  const renderName = () => (
+    <Row className={'pb-3 pt-3'}>
+      <Col>
+        <h1 style={{ fontWeight: 'bold' }}>
+          {payload.name} ({payload.engName})
+        </h1>
+      </Col>
+    </Row>
+  )
+
   return (
-    <S.Container>
-      <div style={{width: "150px", height: "200px", backgroundImage: "url(/profile.jpg)", backgroundSize: "cover"}}/>
-      <S.DetailWrapper>
-        <S.Name>김영록 (YoungRok Kim)</S.Name>
-        <S.Wrapper>
-          <Phone fontSize="small" />
-          <div>010-6342-3413</div>
-        </S.Wrapper>
-        <S.Wrapper>
-          <Email fontSize="small" />
-          <div>shim99887@gmail.com</div>
-        </S.Wrapper>
-        <S.Wrapper>
-          <GitHub fontSize="small" />
-          <a target="_blank" href="https://github.com/shim99887">https://github.com/shim99887</a>
-        </S.Wrapper>
-      </S.DetailWrapper>
-    </S.Container>
+    <div className={'mt-5'}>
+      <Row>
+        <Col sm={12} md={3}>
+          <div className={'text-center pb-5'}>
+            <img
+              className={'img-fluid'}
+              src={payload.profileImage}
+              alt={'profileImage'}
+              style={{ maxHeight: '320px' }}
+            />
+          </div>
+        </Col>
+        <Col sm={12} md={9}>
+          {renderName()}
+          {renderContact()}
+        </Col>
+      </Row>
+    </div>
   )
 }
 

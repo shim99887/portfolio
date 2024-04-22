@@ -1,0 +1,90 @@
+import { Col, Image, Modal, Row } from 'react-bootstrap'
+import { PropsWithChildren } from 'react'
+import { ISideProject } from './ISideProject'
+import { EmptyRowCol, HyperLink, Tag } from '../common'
+import { Style } from '../common/Style'
+
+const SideProjectModal = ({
+  open,
+  toggle,
+  payload,
+}: PropsWithChildren<{
+  open: boolean
+  toggle: () => void
+  payload: ISideProject.SideProject
+}>) => (
+  <Modal centered show={open} onHide={toggle} size={'lg'}>
+    <Modal.Header closeButton>
+      <Modal.Title>{payload.title}</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <Row>
+        <Col sm={6} md={4}>
+          {payload.innerImage.map((url, index) => (
+            <Image
+              key={index.toString()}
+              fluid
+              src={process.env.PUBLIC_URL + url}
+              alt={'innerImage'}
+            />
+          ))}
+        </Col>
+        <Col sm={6} md={8}>
+          <EmptyRowCol>
+            <span style={{ fontWeight: 'bold' }}>{payload.subTitle}</span>
+          </EmptyRowCol>
+
+          <Row className={'mb-2'}>
+            <Col>
+              <span style={{ fontSize: '75%' }} className={'mb-2'}>
+                {payload.detail}
+              </span>
+            </Col>
+          </Row>
+          <EmptyRowCol>
+            <Tag content={'개발 주요 사항'} />
+            {payload.contributes.map((item, index) => (
+              <div key={index.toString()} style={Style.gray}>
+                {item}
+              </div>
+            ))}
+          </EmptyRowCol>
+          <Row className={'mt-2'}>
+            <Col>
+              <Tag content={'기술 스택'} />
+              {payload.techStack.map((item, index) => (
+                <div
+                  key={index.toString()}
+                  style={Style.gray}
+                  className={'mt-2'}
+                >
+                  {item}
+                </div>
+              ))}
+            </Col>
+          </Row>
+          <Row className={'mt-2'}>
+            <Col>
+              <Tag content={'Github'} />
+              <HyperLink url={payload.github} link={payload.github}>
+                {payload.github}
+              </HyperLink>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row className={'mt-2'}>
+        <Col>
+          <Tag content={'상세 정보'} />
+          {payload.projectDescription.map((desc, index) => (
+            <p key={index.toString()} style={Style.gray}>
+              {desc}
+            </p>
+          ))}
+        </Col>
+      </Row>
+    </Modal.Body>
+  </Modal>
+)
+
+export default SideProjectModal

@@ -1,15 +1,14 @@
-export const TechStack = {
-  Java: 'Java',
-  Kotlin: 'Kotlin',
+export const techStack = {
   React: 'React',
-  SpringBoot: 'Spring Boot',
-  Mysql: 'Mysql',
-  JPA: 'JPA',
-  Vue: 'Vue.js',
-  MyBatis: 'MyBatis',
-  MongoDb: 'Mongo DB',
-  Jenkins: 'Jenkins',
+  ReactNative: 'React Native',
   TypeScript: 'TypeScript',
+  SpringBoot: 'Spring Boot',
+  Kotlin: 'Kotlin',
+  Java: 'Java',
+  Jpa: 'JPA',
+  Intellij: 'Intellij',
+  Notion: 'Notion',
+  Slack: 'Slack',
 } as const
 
-export type TechStack = (typeof TechStack)[keyof typeof TechStack]
+export type TechStack = typeof techStack[keyof typeof techStack]
