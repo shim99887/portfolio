@@ -21,12 +21,7 @@ const SideProjectModal = ({
       <Row>
         <Col sm={6} md={4}>
           {payload.innerImage.map((url, index) => (
-            <Image
-              key={index.toString()}
-              fluid
-              src={process.env.PUBLIC_URL + url}
-              alt={'innerImage'}
-            />
+            <Image key={index.toString()} fluid src={url} alt={'innerImage'} />
           ))}
         </Col>
         <Col sm={6} md={8}>
