@@ -1,6 +1,6 @@
-import { ISideProject } from '../components/sideProject/ISideProject'
+import { iSideProject } from '../components/SideProject/iSideProject'
 
-const PickPic: ISideProject.SideProject = {
+const PickPic: iSideProject.SideProject = {
   thumbnail: '/pickpic.png',
   title: 'PickPic',
   innerImage: ['/pickpicLogo.png', '/pickpic.png', '/pickpic2.png'],
@@ -22,7 +22,7 @@ const PickPic: ISideProject.SideProject = {
   ],
 }
 
-const Tmi: ISideProject.SideProject = {
+const Tmi: iSideProject.SideProject = {
   thumbnail: '/tmi.png',
   title: 'TMI',
   innerImage: ['/tmi.png', '/tmi2.png', '/tmi3.png'],
@@ -51,7 +51,7 @@ const Tmi: ISideProject.SideProject = {
   ],
 }
 
-const Comeet: ISideProject.SideProject = {
+const Comeet: iSideProject.SideProject = {
   thumbnail: '/comeet.png',
   title: 'CoMeet',
   innerImage: ['/comeet2.png', '/comeet3.png', '/comeet4.png'],
@@ -75,6 +75,6 @@ const Comeet: ISideProject.SideProject = {
   ],
 }
 
-export const sideProject: ISideProject.Payload = {
+export const sideProject: iSideProject.Payload = {
   list: [PickPic, Comeet, Tmi],
 }

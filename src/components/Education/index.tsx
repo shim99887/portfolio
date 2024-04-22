@@ -1,11 +1,11 @@
 import React, { PropsWithChildren } from 'react'
-import { IEducation } from './IEducation'
 import { Col, Row } from 'react-bootstrap'
+import { iEducation } from './iEducation'
 import EducationRow from './row'
 
-const Education = ({
+const EducationComponent = ({
   payload,
-}: PropsWithChildren<{ payload: IEducation.Payload }>) => {
+}: PropsWithChildren<{ payload: iEducation.Payload }>) => {
   if (payload.disable) return null
 
   return (
@@ -29,4 +29,4 @@ const Education = ({
   )
 }
 
-export default Education
+export default EducationComponent

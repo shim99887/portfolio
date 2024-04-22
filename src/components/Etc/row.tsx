@@ -1,10 +1,10 @@
 import { PropsWithChildren } from 'react'
-import { IEtc } from './IEtc'
+import { iEtc } from './iEtc'
 import { Col, Row } from 'react-bootstrap'
 import { Style } from '../common/Style'
 import { EmptyRowCol } from '../common'
 
-const EtcRow = ({ payload }: PropsWithChildren<{ payload: IEtc.Etc }>) => {
+const EtcRow = ({ payload }: PropsWithChildren<{ payload: iEtc.Etc }>) => {
   console.log()
   return (
     <Row>

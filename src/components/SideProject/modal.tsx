@@ -1,6 +1,6 @@
 import { Col, Image, Modal, Row } from 'react-bootstrap'
 import { PropsWithChildren } from 'react'
-import { ISideProject } from './ISideProject'
+import { iSideProject } from './iSideProject'
 import { EmptyRowCol, HyperLink, Tag } from '../common'
 import { Style } from '../common/Style'
 
@@ -11,7 +11,7 @@ const SideProjectModal = ({
 }: PropsWithChildren<{
   open: boolean
   toggle: () => void
-  payload: ISideProject.SideProject
+  payload: iSideProject.SideProject
 }>) => (
   <Modal centered show={open} onHide={toggle} size={'lg'}>
     <Modal.Header closeButton>

@@ -1,11 +1,11 @@
 import { PropsWithChildren } from 'react'
-import { IExperience } from './IExperience'
+import { iExperience } from './iExperience'
 import { Badge, Col, Row } from 'react-bootstrap'
 import { Style } from '../common/Style'
 
 export const ExperienceRow = ({
   payload,
-}: PropsWithChildren<{ payload: IExperience.Experience }>) => {
+}: PropsWithChildren<{ payload: iExperience.Experience }>) => {
   console.log()
   return (
     <Row>

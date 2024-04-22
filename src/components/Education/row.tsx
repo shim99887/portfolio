@@ -1,12 +1,12 @@
 import { PropsWithChildren } from 'react'
-import { IEducation } from './IEducation'
+import { iEducation } from './iEducation'
 import { Col, Row } from 'react-bootstrap'
 import { Style } from '../common/Style'
 import { EmptyRowCol } from '../common'
 
 const EducationRow = ({
   payload,
-}: PropsWithChildren<{ payload: IEducation.Education }>) => {
+}: PropsWithChildren<{ payload: iEducation.Education }>) => {
   console.log()
   return (
     <Row>

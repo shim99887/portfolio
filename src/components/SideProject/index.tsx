@@ -1,16 +1,16 @@
 import React, { PropsWithChildren, useState } from 'react'
-import { ISideProject } from './ISideProject'
 import { Col, Row } from 'react-bootstrap'
-import SideProjectRow from './row'
+import { iSideProject } from './iSideProject'
 import SideProjectModal from './modal'
+import SideProjectRow from './row'
 
-const SideProject = ({
+const SideProjectComponent = ({
   payload,
-}: PropsWithChildren<{ payload: ISideProject.Payload }>) => {
+}: PropsWithChildren<{ payload: iSideProject.Payload }>) => {
   if (payload.disable) return null
 
   const [open, setOpen] = useState(false)
-  const [pjt, setPjt] = useState<ISideProject.SideProject>({
+  const [pjt, setPjt] = useState<iSideProject.SideProject>({
     thumbnail: '',
     title: '',
     innerImage: [],
@@ -54,4 +54,4 @@ const SideProject = ({
   )
 }
 
-export default SideProject
+export default SideProjectComponent

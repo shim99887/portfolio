@@ -1,11 +1,11 @@
 import { PropsWithChildren } from 'react'
-import { IProject } from './IProject'
+import { iProject } from './iProject'
 import { Col, Row } from 'react-bootstrap'
 import { Style } from '../common/Style'
 
 const ProjectRow = ({
   payload,
-}: PropsWithChildren<{ payload: IProject.Project }>) => {
+}: PropsWithChildren<{ payload: iProject.Project }>) => {
   console.log()
   return (
     <Row>

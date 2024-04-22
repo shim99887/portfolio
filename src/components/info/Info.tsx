@@ -1,9 +1,9 @@
 import React, { PropsWithChildren } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { IInfo } from './IInfo'
+import { iInfo } from './iInfo'
 import { HyperLink } from '../common'
 
-const Info = ({ payload }: PropsWithChildren<{ payload: IInfo.Payload }>) => {
+const Info = ({ payload }: PropsWithChildren<{ payload: iInfo.Payload }>) => {
   if (payload.disable) return null
 
   const renderContact = () => (

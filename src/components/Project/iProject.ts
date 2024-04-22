@@ -1,14 +1,15 @@
 import { ICommon } from '../common/ICommon'
 
-export declare namespace IEtc {
-  export interface Etc {
+export declare namespace iProject {
+  export interface Project {
+    title: string
     startedAt: string
     endedAt?: string
-    title: string
-    description: string
+    company: string
+    contribute: string[]
   }
 
   export interface Payload extends ICommon.Payload {
-    list: Etc[]
+    list: Project[]
   }
 }

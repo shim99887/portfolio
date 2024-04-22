@@ -1,10 +1,10 @@
 import { PropsWithChildren } from 'react'
-import { IIntroduce } from './IIntroduce'
 import { Col, Row } from 'react-bootstrap'
+import { iIntroduce } from './iIntroduce'
 
-const Introduce = ({
+const IntroduceComponent = ({
   payload,
-}: PropsWithChildren<{ payload: IIntroduce.Payload }>) => {
+}: PropsWithChildren<{ payload: iIntroduce.Payload }>) => {
   if (payload.disable) return null
   console.log()
   return (
@@ -21,4 +21,4 @@ const Introduce = ({
   )
 }
 
-export default Introduce
+export default IntroduceComponent

@@ -1,11 +1,11 @@
 import React, { PropsWithChildren } from 'react'
-import { IExperience } from './IExperience'
 import { Badge, Col, Row } from 'react-bootstrap'
 import { ExperienceRow } from './row'
+import { iExperience } from './iExperience'
 
-const Experience = ({
+const ExperienceComponent = ({
   payload,
-}: PropsWithChildren<{ payload: IExperience.Payload }>) => {
+}: PropsWithChildren<{ payload: iExperience.Payload }>) => {
   if (payload.disable) return null
   return (
     <div>
@@ -34,4 +34,4 @@ const Experience = ({
   )
 }
 
-export default Experience
+export default ExperienceComponent

@@ -1,11 +1,11 @@
 import React, { PropsWithChildren } from 'react'
-import { IProject } from './IProject'
+import { iProject } from './iProject'
 import { Col, Row } from 'react-bootstrap'
 import ProjectRow from './row'
 
-const Project = ({
+const ProjectComponent = ({
   payload,
-}: PropsWithChildren<{ payload: IProject.Payload }>) => {
+}: PropsWithChildren<{ payload: iProject.Payload }>) => {
   if (payload.disable) return null
   console.log()
   return (
@@ -29,4 +29,4 @@ const Project = ({
   )
 }
 
-export default Project
+export default ProjectComponent

@@ -1,9 +1,9 @@
 import { Col, Row } from 'react-bootstrap'
 import React, { PropsWithChildren } from 'react'
 import { Style } from '../common/Style'
-import { ISkill } from './ISkill'
+import { iSkill } from './iSkill'
 
-const Skill = ({ payload }: PropsWithChildren<{ payload: ISkill.Payload }>) => {
+const Skill = ({ payload }: PropsWithChildren<{ payload: iSkill.Payload }>) => {
   if (payload.disable) return null
 
   return (

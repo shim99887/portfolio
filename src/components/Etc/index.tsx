@@ -1,9 +1,11 @@
 import React, { PropsWithChildren } from 'react'
-import { IEtc } from './IEtc'
 import { Col, Row } from 'react-bootstrap'
+import { iEtc } from './iEtc'
 import EtcRow from './row'
 
-const Etc = ({ payload }: PropsWithChildren<{ payload: IEtc.Payload }>) => {
+const EtcComponent = ({
+  payload,
+}: PropsWithChildren<{ payload: iEtc.Payload }>) => {
   if (payload.disable) return null
 
   return (
@@ -29,4 +31,4 @@ const Etc = ({ payload }: PropsWithChildren<{ payload: IEtc.Payload }>) => {
   )
 }
 
-export default Etc
+export default EtcComponent
