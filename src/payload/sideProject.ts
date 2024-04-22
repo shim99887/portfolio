@@ -1,9 +1,9 @@
 import { iSideProject } from '../components/SideProject/iSideProject'
 
 const PickPic: iSideProject.SideProject = {
-  thumbnail: '/pickpic.png',
+  thumbnail: 'pickpic.png',
   title: 'PickPic',
-  innerImage: ['/pickpicLogo.png', '/pickpic.png', '/pickpic2.png'],
+  innerImage: ['pickpicLogo.png', 'pickpic.png', 'pickpic2.png'],
   subTitle:
     '사진을 공유하고 어떤 사진이 좋은지 투표받는 웹사이트 (프론트엔드 개발)',
   detail: '삼성청년 소프트웨어 아카데미 공통 프로젝트 (2021-01 ~ 2021-02)',
@@ -23,9 +23,9 @@ const PickPic: iSideProject.SideProject = {
 }
 
 const Tmi: iSideProject.SideProject = {
-  thumbnail: '/tmi.png',
+  thumbnail: 'tmi.png',
   title: 'TMI',
-  innerImage: ['/tmi.png', '/tmi2.png', '/tmi3.png'],
+  innerImage: ['tmi.png', 'tmi2.png', 'tmi3.png'],
   subTitle: '프로젝트 별 테스트 결과를 관리할 수 있는 웹사이트 (백엔드 개발)',
   detail: '삼성청년 소프트웨어 아카데미 기업 연계 프로젝트 (2021-04 ~ 2021-05)',
   contributes: [
@@ -52,9 +52,9 @@ const Tmi: iSideProject.SideProject = {
 }
 
 const Comeet: iSideProject.SideProject = {
-  thumbnail: '/comeet.png',
+  thumbnail: 'comeet.png',
   title: 'CoMeet',
-  innerImage: ['/comeet2.png', '/comeet3.png', '/comeet4.png'],
+  innerImage: ['comeet2.png', 'comeet3.png', 'comeet4.png'],
   subTitle: '코로나 시국 약속장소 추천해주는 웹사이트 (프론트엔드 개발)',
   detail: '삼성청년 소프트웨어 아카데미 특화 프로젝트 (2021-02 ~ 2021-04)',
   contributes: [
