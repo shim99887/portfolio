@@ -5,9 +5,7 @@ import { Style } from '../common/Style'
 
 const ProjectRow = ({
   payload,
-}: PropsWithChildren<{ payload: iProject.Project }>) => {
-  console.log()
-  return (
+}: PropsWithChildren<{ payload: iProject.Project }>) => (
     <Row>
       <Col style={Style.gray} sm={12} md={4}>
         <h5>
@@ -39,6 +37,5 @@ const ProjectRow = ({
       </Col>
     </Row>
   )
-}
 
 export default ProjectRow

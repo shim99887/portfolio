@@ -12,7 +12,16 @@ const PickPic: iSideProject.SideProject = {
     '- 게시글 작성 페이지 개발',
     '- 게시글 페이지, 투표, 댓글 기능 개발',
   ],
-  techStack: ['- Vue.js', '- Java', '- MyBatis', '- Mysql', '- Spring Boot'],
+  techStack: [
+    '- Vue.js',
+    '- Java',
+    '- MyBatis',
+    '- Mysql',
+    '- Spring Boot',
+    '- Jenkins',
+    '- Jira',
+    '- Notion',
+  ],
   github: 'https://github.com/shim99887/PickPic',
   projectDescription: [
     '삼성청년소프트웨어아카데미(SSAFY)에서 공통 프로젝트로 진행한 프로젝트입니다.\n' +
@@ -41,7 +50,8 @@ const Tmi: iSideProject.SideProject = {
     '- Mysql',
     '- Spring Boot',
     '- Mongo DB',
-    '- Jenkins',
+    '- Jira',
+    '- Notion',
   ],
   github: 'https://github.com/shim99887/TMI',
   projectDescription: [
@@ -64,7 +74,15 @@ const Comeet: iSideProject.SideProject = {
     '- 회원 가입 및 로그인 기능 개발',
     '- FAQ 페이지 개발',
   ],
-  techStack: ['- Vue.js', '- Java', '- MyBatis', '- Mysql', '- Spring Boot'],
+  techStack: [
+    '- Vue.js',
+    '- Java',
+    '- MyBatis',
+    '- Mysql',
+    '- Spring Boot',
+    '- Jira',
+    '- Notion',
+  ],
   github: 'https://github.com/shim99887/co-meet',
   projectDescription: [
     '삼성청년소프트웨어아카데미(SSAFY)에서 특화 프로젝트로 진행한 프로젝트입니다.\n' +

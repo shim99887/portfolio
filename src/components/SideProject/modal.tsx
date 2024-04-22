@@ -47,15 +47,18 @@ const SideProjectModal = ({
           <Row className={'mt-2'}>
             <Col>
               <Tag content={'기술 스택'} />
-              {payload.techStack.map((item, index) => (
-                <div
-                  key={index.toString()}
-                  style={Style.gray}
-                  className={'mt-2'}
-                >
-                  {item}
-                </div>
-              ))}
+              <Row>
+                {payload.techStack.map((item, index) => (
+                  <Col
+                    key={index.toString()}
+                    style={Style.gray}
+                    className={'mt-2'}
+                    md={6}
+                  >
+                    {item}
+                  </Col>
+                ))}
+              </Row>
             </Col>
           </Row>
           <Row className={'mt-2'}>

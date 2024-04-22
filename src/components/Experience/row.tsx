@@ -5,9 +5,7 @@ import { Style } from '../common/Style'
 
 export const ExperienceRow = ({
   payload,
-}: PropsWithChildren<{ payload: iExperience.Experience }>) => {
-  console.log()
-  return (
+}: PropsWithChildren<{ payload: iExperience.Experience }>) => (
     <Row>
       <Col style={Style.gray} sm={12} md={4}>
         <h5>
@@ -53,4 +51,3 @@ export const ExperienceRow = ({
       </Col>
     </Row>
   )
-}

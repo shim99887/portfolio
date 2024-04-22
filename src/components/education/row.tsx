@@ -6,9 +6,7 @@ import { EmptyRowCol } from '../common'
 
 const EducationRow = ({
   payload,
-}: PropsWithChildren<{ payload: iEducation.Education }>) => {
-  console.log()
-  return (
+}: PropsWithChildren<{ payload: iEducation.Education }>) => (
     <Row>
       <Col style={Style.gray} sm={12} md={4}>
         <h5>
@@ -25,6 +23,5 @@ const EducationRow = ({
       </Col>
     </Row>
   )
-}
 
 export default EducationRow

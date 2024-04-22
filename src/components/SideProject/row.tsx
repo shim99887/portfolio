@@ -4,9 +4,7 @@ import { Card } from 'react-bootstrap'
 
 const SideProjectRow = ({
   payload,
-}: PropsWithChildren<{ payload: iSideProject.SideProject }>) => {
-  console.log()
-  return (
+}: PropsWithChildren<{ payload: iSideProject.SideProject }>) => (
     <Card className={'text-center'}>
       <Card.Img variant="top" src={payload.thumbnail} />
       <Card.Body>
@@ -16,6 +14,5 @@ const SideProjectRow = ({
       </Card.Body>
     </Card>
   )
-}
 
 export default SideProjectRow

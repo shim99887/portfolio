@@ -7,7 +7,7 @@ const ProjectComponent = ({
   payload,
 }: PropsWithChildren<{ payload: iProject.Payload }>) => {
   if (payload.disable) return null
-  console.log()
+
   return (
     <div>
       <Row className={'mt-5 mb-2'}>

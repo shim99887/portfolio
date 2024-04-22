@@ -4,9 +4,7 @@ import { Col, Row } from 'react-bootstrap'
 import { Style } from '../common/Style'
 import { EmptyRowCol } from '../common'
 
-const EtcRow = ({ payload }: PropsWithChildren<{ payload: iEtc.Etc }>) => {
-  console.log()
-  return (
+const EtcRow = ({ payload }: PropsWithChildren<{ payload: iEtc.Etc }>) => (
     <Row>
       <Col style={Style.gray} sm={12} md={4}>
         <h5>
@@ -23,6 +21,5 @@ const EtcRow = ({ payload }: PropsWithChildren<{ payload: iEtc.Etc }>) => {
       </Col>
     </Row>
   )
-}
 
 export default EtcRow

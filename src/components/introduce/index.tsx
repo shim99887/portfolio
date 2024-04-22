@@ -6,7 +6,6 @@ const IntroduceComponent = ({
   payload,
 }: PropsWithChildren<{ payload: iIntroduce.Payload }>) => {
   if (payload.disable) return null
-  console.log()
   return (
     <Row>
       <Col sm={12} md={3}>

@@ -1,4 +1,4 @@
-import { iEducation } from '../components/Education/iEducation'
+import { iEducation } from '../components/education/iEducation'
 
 const ssafy: iEducation.Education = {
   startedAt: '2020.07',
