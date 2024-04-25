@@ -1,11 +1,10 @@
 // globalStyle
 
-import {CSSProperties} from "react";
+import { CSSProperties } from 'react'
 
 type TStyleKey =
-// | 'blue'
-  | 'gray'
-  | 'global'
+  // | 'blue'
+  'gray' | 'global' | 'detail' | 'detailGray'
 // | 'sign'
 // | 'profileImg'
 // | 'footerCover'
@@ -14,10 +13,19 @@ type TStyleKey =
 
 export const Style: Record<TStyleKey, CSSProperties> = {
   gray: {
-    color: "slategrey"
+    color: 'slategray',
   },
   global: {
     fontFamily: 'Pretendard',
     lineHeight: 1.5,
-  }
+  },
+  detail: {
+    fontSize: '75%',
+    whiteSpace: 'pre-wrap',
+  },
+  detailGray: {
+    color: 'gray',
+    fontSize: '75%',
+    whiteSpace: 'pre-wrap',
+  },
 }

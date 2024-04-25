@@ -61,8 +61,46 @@ const Chatting: iProject.Project = {
     'Kotlin 사용 Kafka 이벤트 핸들링 및 쿠폰 관련 백엔드 기능 개발',
     '팀 주문 성사 비율 n% 증가',
   ],
+  detail: {
+    innerImage: ['clubImage1.png', 'clubImage2.png'],
+    projectDetail:
+      '고객 앱 내 소셜 실험을 위한 채팅 시스템 개발, A/B 테스트 형식으로 개발하여 가설 검증',
+    contributes: [
+      'Kafka 웹 소켓을 이용한 실시간 채팅 구현',
+      '떡볶이라는 메뉴를 주문 시 같이 주문한 사람들과 포인트를 분배받는 기능 추가',
+      'Kotlin을 사용 Kafka 이벤트 핸들링 및 Rest API 작성',
+      'React, TypeScript 사용 채팅방 구현',
+      'Fcm 사용 이벤트 발생 시 푸시 전송',
+    ],
+    techStack: [
+      'Kotlin',
+      'Spring Boot',
+      'JPA',
+      'Apache Kafka',
+      'MySql',
+      'React',
+      'TypeScript',
+      'FCM',
+      'Next.js',
+      'Git',
+    ],
+    detail:
+      '고객들이 공동의 취향을 가지고 채팅방에 모이면 같은 주제로 대화가 이어지면서 추후 해당 음식 주문까지 발생할 것이다 라는 가정으로 A/B 테스트 형식으로 개발을 진행하였습니다.\n 하지만 공통의 주제를 가지고 입장을 하여도 입장 인원에 비하여 채팅이 활발하지 않다는 문제점을 발견하고, 개인간의 채팅으로 변경하여 좀 더 근처에 거주하는 사람들과 먼저 대화를 오고 갈 수 있도록 변경 개발하였습니다.',
+    retrospect: [
+      {
+        title: 'Kafka 웹 소켓을 이용한 실시간 채팅 기능 구현',
+        content:
+          'Apache Kafka를 통한 웹 소켓으로 실시간 채팅을 구현하였습니다. 하나의 토픽 아래 행정동 별로 다른 채널을 구독하도록 설정하여 채팅방을 구분하였습니다. 또한 유저 입장, 퇴장, 배달 주문 시 해당 이벤트 별로 Message Type을 변경하여 처리하였습니다.',
+      },
+      {
+        title: 'React, TypeScript를 사용하여 채팅방 구현',
+        content:
+          '채팅방 UI는 디자이너와 협업하여 Figma를 통하여 전달받고 해당 디자인을 바탕으로 개발을 진행했습니다. 또한 최상단으로 스크롤 이동 시 이전 채팅을 불러오도록 개발했습니다. 떡볶이라는 메뉴를 주문 시 웹 소켓 이벤트를 통하여 쿠폰 발급 대상자라면 이벤트 모달을 보여주는 방식으로 개발하였습니다.',
+      },
+    ],
+  },
 }
 
 export const project: iProject.Payload = {
-  list: [KoreanAir, Mart, Settlement, Optimization, Chatting],
+  list: [Chatting, Optimization, Settlement, Mart, KoreanAir],
 }
