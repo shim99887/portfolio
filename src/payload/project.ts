@@ -11,6 +11,55 @@ const KoreanAir: iProject.Project = {
   ],
 }
 
+const NodeDistanceCostSystem: iProject.Project = {
+  title: '노드 거리 기반 단가체계 기획 및 개발',
+  startedAt: '2023.05',
+  endedAt: '2023.06',
+  company: '두잇',
+  contribute: [
+    '배달 노드와 노드 사이의 거리를 기반으로 단가 체계 기획 및 모델링',
+    '모델링 바탕으로 기획자 및 디자이너와 협의 후 Figma 기반 디자인 협의',
+    'React Native, TypeScript 기반으로 지도 화면 구성 및 단가 정보 제공 페이지 제작',
+    'Kotlin, Spring Boot, JPA 기반 노드 기반 단가 책정 및 정산 기능 개발',
+  ],
+  detail: {
+    innerImage: ['nodeDistanceImage1.png', 'nodeDistanceImage2.png'],
+    projectDetail: '라이더 단가 비용 절감을 위한 새로운 단가 체계 기획 및 개발',
+    contributes: [
+      'Kotlin, Spring Boot 사용 Rest API 개발',
+      '노드 및 100m 거리별 적정 단가 책정을 위한 Excel 모델링',
+      '디자이너와 Figma로 디자인 협의',
+      'React Native, TypeScript로 화면 개발',
+      '새로운 단가 체계를 위한 라이더 정산 개발',
+    ],
+    techStack: [
+      'Kotlin',
+      'Spring Boot',
+      'JPA',
+      'MySql',
+      'React Native',
+      'TypeScript',
+      'FCM',
+      'Git',
+      'Figma',
+      'Slack',
+    ],
+    detail:
+      '라이더 건당 단가를 약 100원 정도 절감해야하는 상황에서 기존 단가 체계로는 한계가 있어서 새로운 단가체계의 기획 및 개발이 필요했습니다. ' +
+      '저는 기획부터 개발까지 맡아서 진행해보라는 지시를 받고 모델링부터 시작하였습니다. 모델링의 초점은 100원을 절감하면서 라이더가 합리적으로 느낄만한 단가를 제시하는 것입니다. ' +
+      '두잇의 묶음 배달 특징은 같은 행정동 내의 주문이 묶인다는 것이 있습니다. ' +
+      '따라서 노드의 단가는 낮추고 100m 당 단가를 높여서 먼 거리는 조금 더 라이더에게 유리하고 단 거리는 회사에게 이익이 되도록 모델링하였습니다. ' +
+      '해당 단가체계로 프론트엔드 및 백엔드 모두 개발을 진행하였습니다.',
+    retrospect: [
+      {
+        title: '단가 Excel 모델링',
+        content:
+          '단건 배차, 2건 동시 배차, 3건 동시 배차에 따라 각각 노드 간의 평균 거리를 기반, 주문 수를 가중치로 설정하여 100m 당 단가 및 노드 단가를 책정하였습니다. 해당 단가 모델링은 대표님과 라이더 팀 메인 PO와 협의 후 통과되어 실제 단가체계로 적용되었습니다. 해당 프로젝트로 기획부터 디자인 개발까지 모두 직접 경험해볼 수 있었습니다.',
+      },
+    ],
+  },
+}
+
 const Mart: iProject.Project = {
   title: '마트 장보기 신사업 풀스택 개발',
   startedAt: '2022.10',
@@ -22,6 +71,42 @@ const Mart: iProject.Project = {
     'Java로 백엔드 개발 및 React, TypeScript로 Admin 서비스 개발',
     '목표 수치인 일 100건의 주문을 오픈 후 달성 완료',
   ],
+  detail: {
+    innerImage: ['martImage1.png', 'martImage2.png'],
+    projectDetail:
+      '고객 앱 내 마트 신사업 백엔드 개발을 맡아서 필요한 테이블 설계 및 Rest API 개발을 진행했습니다. 또한 결제 및 환불 로직 개발도 진행하였습니다.',
+    contributes: [
+      'Java, Spring Boot 사용 Rest API 개발',
+      'Toss Payment 사용 주문, 결제, 환불 기능 구현 및 마트 정산 기능 개발',
+      '주문 추적을 위한 라이더 위치 및 현황을 제공하는 Admin 페이지 개발',
+      '마트 상품 정보 크롤링',
+    ],
+    techStack: [
+      'Kotlin',
+      'Spring Boot',
+      'JPA',
+      'MySql',
+      'React',
+      'TypeScript',
+      'FCM',
+      'Next.js',
+      'Git',
+    ],
+    detail:
+      '음식 배달 이외의 수익처를 발견하고자 시작된 프로젝트로 마트를 섭외하여 4시 이전에 주문 시 당일 6시 배송을 원칙으로 배달을 해준다면 고객 주문수가 많이 발생할 것이다 라는 가정으로 시작되었습니다. 결제 시스템은 Toss Payment를 사용하였고 결제 및 환불 기능을 구현하였습니다. 라이더 위치는 Redis에 저장된 라이더 위치 정보를 기반으로 제공하였습니다.',
+    retrospect: [
+      {
+        title: '주문, 결제, 환불 기능 구현 및 마트 정산 기능 개발',
+        content:
+          '기존 배달 주문인 팀 배달과 다르게 단 건 주문으로 새롭게 테이블 및 주문 정보를 세팅하였고, TossPay 및 IamPort 결제 및 환불 기능을 만들어 적용하였습니다. 또한 주문 건당 수수료를 계산하여 마트 사장님께 제공되는 정산 기능 및 페이지를 제작하였습니다.',
+      },
+      {
+        title: 'React, TypeScript를 사용하여 채팅방 구현',
+        content:
+          'Redis에 실시간 저장된 배달 라이더 정보를 이용하여 현재 라이더의 위치를 운영팀에게 전달하고, 아직 배달이 완료되지 않은 주문 트래킹 및 품절로 인한 환불 기능을 운영팀이 할 수 있도록 Admin 페이지를 제작하였습니다.',
+      },
+    ],
+  },
 }
 
 const Settlement: iProject.Project = {
@@ -102,5 +187,12 @@ const Chatting: iProject.Project = {
 }
 
 export const project: iProject.Payload = {
-  list: [Chatting, Optimization, Settlement, Mart, KoreanAir],
+  list: [
+    Chatting,
+    NodeDistanceCostSystem,
+    Optimization,
+    Settlement,
+    Mart,
+    KoreanAir,
+  ],
 }
