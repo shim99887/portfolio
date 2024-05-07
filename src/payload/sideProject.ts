@@ -93,6 +93,26 @@ const Comeet: iSideProject.SideProject = {
   ],
 }
 
+const Portfolio: iSideProject.SideProject = {
+  thumbnail: 'portfolio.png',
+  title: '포트폴리오',
+  innerImage: ['portfolio.png', 'portfolio2.png', 'portfolio3.png'],
+  subTitle: '김영록 포트폴리오',
+  detail: '개발자 포트폴리오 웹 페이지 제작 (2024-03 ~ 2024-04)',
+  contributes: [
+    '- React, TypeScript 사용 프론트엔드 개발',
+    '- Github Page 기능 이용 정적 배포',
+    '- 반응형 대응을 위한 bootstrap grid 적용',
+  ],
+  techStack: ['- React', '- TypeScript', '- BootStrap'],
+  github: 'https://github.com/shim99887/portfolio',
+  projectDescription: [
+    '포트폴리오 제출용 웹 사이트입니다. 최대한 깔끔하게 제가 했던 업무 및 프로젝트를 전달하려고 노력하였습니다.\n' +
+      '반응형 적용을 위해 react-bootstrap을 사용하여 모바일 기기 대응을 진행하였습니다.\n' +
+      '또한 빠른 배포를 위해 Github Pages 기능을 사용하였습니다.',
+  ],
+}
+
 export const sideProject: iSideProject.Payload = {
-  list: [PickPic, Comeet, Tmi],
+  list: [PickPic, Comeet, Tmi, Portfolio],
 }

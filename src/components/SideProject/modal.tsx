@@ -75,7 +75,7 @@ const SideProjectModal = ({
         <Col>
           <Tag content={'상세 정보'} />
           {payload.projectDescription.map((desc, index) => (
-            <p key={index.toString()} style={Style.gray}>
+            <p key={index.toString()} style={Style.sideProjectDetail}>
               {desc}
             </p>
           ))}

@@ -4,7 +4,7 @@ import { CSSProperties } from 'react'
 
 type TStyleKey =
   // | 'blue'
-  'gray' | 'global' | 'detail' | 'detailGray'
+  'gray' | 'global' | 'detail' | 'detailGray' | 'sideProjectDetail'
 // | 'sign'
 // | 'profileImg'
 // | 'footerCover'
@@ -26,6 +26,10 @@ export const Style: Record<TStyleKey, CSSProperties> = {
   detailGray: {
     color: 'gray',
     fontSize: '75%',
+    whiteSpace: 'pre-wrap',
+  },
+  sideProjectDetail: {
+    color: 'slategray',
     whiteSpace: 'pre-wrap',
   },
 }
