@@ -16,11 +16,12 @@ export const skill: iSkill.Payload = {
         'Mysql',
         'Mybatis',
         'Kafka',
+        'Oracle',
       ],
     },
     {
       group: 'Utility',
-      list: ['Slack', 'Git', 'Notion', 'IDEA', 'Jenkins'],
+      list: ['Slack', 'Git', 'Notion', 'IDEA', 'Jenkins', 'Nexacro N'],
     },
   ],
 }

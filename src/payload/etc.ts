@@ -1,5 +1,12 @@
 import { iEtc } from '../components/Etc/iEtc'
 
+const indonesia: iEtc.Etc = {
+  startedAt: '2024.09',
+  endedAt: '2024.12',
+  title: '인도네시아 해외 출장',
+  description: '인도네시아 법인 봉제 MES 구축',
+}
+
 const opic: iEtc.Etc = {
   startedAt: '2024.03',
   title: 'Opic(영어)',
@@ -13,5 +20,5 @@ const ssafyReward: iEtc.Etc = {
 }
 
 export const etc: iEtc.Payload = {
-  list: [opic, ssafyReward],
+  list: [indonesia, opic, ssafyReward],
 }

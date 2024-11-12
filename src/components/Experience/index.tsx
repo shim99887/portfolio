@@ -15,7 +15,7 @@ const ExperienceComponent = ({
             EXPERIENCE
             <span style={{ fontSize: '50%' }}>
               {' '}
-              <Badge bg="secondary">총 2년 3개월</Badge>
+              <Badge bg="secondary">총 2년 7개월</Badge>
             </span>
           </h3>
         </Col>

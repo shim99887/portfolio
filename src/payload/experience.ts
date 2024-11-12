@@ -1,5 +1,19 @@
 import { iExperience } from '../components/Experience/iExperience'
 
+const Shinwon: iExperience.Experience = {
+  startedAt: '2023.08',
+  company: '신원',
+  description: 'MES 시스템 개발자',
+  techStack: ['JavaScript', 'Java', 'Spring Boot', 'Mybatis', 'Nexacro N'],
+  contribute: [
+    '해외법인 스마트 팩토리 셋업 및 관리',
+    '해외법인 스마트 팩토리 현장 셋업 교육',
+    'MES 관련 매뉴 개발 및 분석',
+    'MES 운영 및 유지보수 관리',
+    '재단, 봉제, 검사 관련 메뉴 개발',
+  ],
+}
+
 const Doeat: iExperience.Experience = {
   startedAt: '2022.09',
   endedAt: '2023.09',
@@ -47,5 +61,5 @@ const Thirautech: iExperience.Experience = {
 }
 // 2022.09 ~ 2023-09
 export const experience: iExperience.Payload = {
-  list: [Doeat, Thirautech],
+  list: [Shinwon, Doeat, Thirautech],
 }
